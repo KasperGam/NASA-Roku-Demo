@@ -10,12 +10,24 @@
         <Poster
             id="logo"
             uri="pkg:/images/logo.png"
-            translation="[90,55]"
+            translation="[90,50]"
         />
         <!-- Loading text, use while grabbing content-->
         <BusySpinner
             id="loadingIcon"
             visible="true"
         />
+
+        <RowList
+            id="rowlist"
+            visible="false"
+            numRows="2"
+            translation="[90, 120]"
+            itemSize="[1830, 350]"
+            rowItemSize="[[350, 350]]"
+            rowItemSpacing="[[40, 0]]"
+            itemSpacing="[0, 150]"
+            rowLabelOffset="[[10, 20]]"
+            showRowLabel="[true]" />
     </children>
 </component>

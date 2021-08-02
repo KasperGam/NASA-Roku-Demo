@@ -34,9 +34,10 @@ sub retrieve_data()
                         collectionChild = childNode.createChild("ContentNode")
                         collectionChild.title = item.data[0].title
                         collectionChild.description = item.data[0].description
+                        collectionChild.url = item.links[0].href
+                        collectionChild.fhdPosterURL = item.links[0].href
                         collectionChild.addFields({
                             collectionURL: item.href
-                            image: item.links[0].href
                         })
                     end for
                 end if
