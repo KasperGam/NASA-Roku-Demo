@@ -7,11 +7,25 @@
     <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
     <children>
         <!-- add the logo -->
-        <Poster
-            id="logo"
-            uri="pkg:/images/logo.png"
-            translation="[90,50]"
-        />
+        <LayoutGroup
+            layoutDirection="horiz"
+            vertAlignment="center"
+            translation="[90, 50]"
+            itemSpacings="[30]" >
+
+            <Poster
+                id="logo"
+                uri="pkg:/images/logo.png"
+                height="100"
+                width="100"
+                loadDisplayMode="scaleToFit" />
+
+            <Label
+                id="logoText"
+                color="0xFFFFFFFF"
+                text="Hubble Image Search" />
+        </LayoutGroup>
+
         <!-- Loading text, use while grabbing content-->
         <BusySpinner
             id="loadingIcon"

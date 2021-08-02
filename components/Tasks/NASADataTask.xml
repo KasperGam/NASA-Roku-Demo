@@ -3,6 +3,7 @@
     <interface>
         <field id="content" type="Node" />
         <field id="error" type="String" />
+        <field id="keywords" type="StringArray" />
     </interface>
 
     <script type="text/brightscript" uri="NASADataTask.brs" />

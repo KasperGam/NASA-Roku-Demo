@@ -6,7 +6,10 @@ sub retrieve_data()
     ' retrieve the data, best comment ever
     request = CreateObject("roURLTransfer")
     request.setCertificatesFile("common:/certs/ca-bundle.crt")
-    keywords = ["nebula", "Jupiter", "Sun", "Saturn"]
+    keywords = m.top.keywords
+    if keywords.count() = 0
+        keywords = ["Nebula", "Jupiter", "Sun", "Saturn"]
+    end if
     categories = {}
 
     searchURL = "https://images-api.nasa.gov/search?q=[query]&media_type=[type]"
