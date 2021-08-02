@@ -5,6 +5,7 @@
     <script type="text/brightscript" uri="controllers/GridScreen.brs" />
     <script type="text/brightscript" uri="controllers/SlideShowLogic.brs" />
     <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/defaults.brs" />
     <children>
         <!-- add the logo -->
         <LayoutGroup
@@ -24,6 +25,15 @@
                 id="logoText"
                 color="0xFFFFFFFF"
                 text="Hubble Image Search" />
+        </LayoutGroup>
+
+        <LayoutGroup
+            layoutDirection="vert"
+            translation="[1830, 50]"
+            vertAlignment="center"
+            horizAlignment="right" >
+
+            <Label text="* to change search" />
         </LayoutGroup>
 
         <!-- Loading text, use while grabbing content-->

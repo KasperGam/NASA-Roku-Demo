@@ -17,5 +17,9 @@ sub item_focused()
     focusedIndex = m.row_list.rowItemFocused
     row = m.row_list.content.GetChild(focusedIndex[0])
     item = row.GetChild(focusedIndex[1])
-    m.title.text = item.title
+    if item.title <> Invalid
+        m.title.text = item.title
+    else
+        m.title.text = ""
+    end if
 end sub

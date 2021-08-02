@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="OptionsScreen" extends="Group">
+    <script type="text/brightscript" uri="OptionsScreen.brs" />
+
+    <interface>
+        <field id="options" type="assocArray" />
+        <function name="setInitialOptions" />
+    </interface>
+
+    <children>
+        <Label
+            text="Options"
+            translation="[90, 100]"
+            font="font:LargeSystemFont"
+            color="0xFFFFFFFF" />
+
+        <LayoutGroup
+            layoutDirection="vert"
+            translation="[90, 250]"
+            itemSpacings="[20]" >
+
+            <Label
+                text="Add/Remove hubble search queries:"
+                font="font:MediumBoldSystemFont" />
+
+            <CheckList
+                id="checklist"
+                itemSize="[500, 48]" />
+        </LayoutGroup>
+
+        <LayoutGroup
+            translation="[1440, 250]"
+            horizAlignment="center"
+            layoutDirection="vert"
+            itemSpacings="[20]" >
+
+            <Label
+                text="Add new query:"
+                font="font:MediumBoldSystemFont" />
+
+            <TextField
+                id="input"
+                width="400" />
+
+            <Button
+                id="addButton"
+                text="Add Query"
+                iconUri=""
+                focusedIconUri=""
+                minWidth="400" />
+        </LayoutGroup>
+    </children>
+</component>
