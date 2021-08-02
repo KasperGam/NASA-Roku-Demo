@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="Intro.brs" />
+    <script type="text/brightscript" uri="controllers/ScreenManager.brs" />
+    <script type="text/brightscript" uri="controllers/ContentRetriever.brs" />
+    <script type="text/brightscript" uri="controllers/GridScreen.brs" />
+    <script type="text/brightscript" uri="controllers/SlideShowLogic.brs" />
+    <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
+    <children>
+        <!-- add the logo -->
+        <Overhang
+            id="overhangLogo"
+            showOptions="false"
+            showClock="false"
+            logoUri="pkg:/images/logo.png"
+            translation="[90,55]"
+        />
+        <!-- Loading text, use while grabbing content-->
+        <Label
+            id="loadingText"
+            text="Loading Content..."
+            font="font:BoldSystemFont"
+            width="1280"
+            height="720"
+            horizAlign="center"
+            vertAlign="center"
+            translation="[0, 0]"
+            visible="false"
+        />
+    </children>
+</component>

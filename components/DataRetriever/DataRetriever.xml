@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="DataRetriever" extends="Task">
+    <interface>
+        <field id="content" type="node" />
+    </interface>
+
+    <script type="text/brightscript" uri="DataRetriever.brs" />
+</component>
