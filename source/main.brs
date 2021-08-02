@@ -10,7 +10,7 @@ sub load_screen()
     m.msg_port = CreateObject("roMessagePort")
     screen.SetMessagePort(m.msg_port)
     ' create & call the scence
-    scene = screen.CreateScene("Intro")
+    scene = screen.CreateScene("MainScene")
     screen.Show()
 
     while(true)

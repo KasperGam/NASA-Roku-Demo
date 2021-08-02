@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script type="text/brightscript" uri="controllers/ScreenManager.brs" />
+    <script type="text/brightscript" uri="controllers/GridScreen.brs" />
+    <script type="text/brightscript" uri="controllers/SlideShowLogic.brs" />
+    <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
+    <children>
+        <!-- add the logo -->
+        <Poster
+            id="logo"
+            uri="pkg:/images/logo.png"
+            translation="[90,55]"
+        />
+        <!-- Loading text, use while grabbing content-->
+        <BusySpinner
+            id="loadingIcon"
+            visible="true"
+        />
+    </children>
+</component>

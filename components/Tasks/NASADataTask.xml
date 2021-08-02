@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="NASADataTask" extends="Task">
+    <interface>
+        <field id="content" type="Node" />
+        <field id="error" type="String" />
+    </interface>
+
+    <script type="text/brightscript" uri="NASADataTask.brs" />
+</component>

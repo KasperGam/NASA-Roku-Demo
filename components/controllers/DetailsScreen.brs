@@ -1,8 +1,7 @@
-sub show_details(content as Object, selected as Integer)
+sub show_details(content as Object)
     ' create new instance of details screen
     details_screen = CreateObject("roSGNode", "DetailsScreen")
     details_screen.content = content
-    details_screen.jumpToItem = selected ' set index of item which should be focused
     details_screen.ObserveField("visible", "details_visibility_changed")
     details_screen.ObserveField("buttonSelected", "button_selected")
     load_screen(details_screen)
