@@ -23,15 +23,14 @@ sub retrieve_data()
             response = request.getToString()
             json = ParseJson(response)
             if json <> invalid
-                childNode = content_node.createChild("ContentNode")
-                childNode.setFields({
-                    title: param
-                    description: "Hubble images of " + param
-                })
-
                 items = json.collection.items
                 if items <> invalid and items.count() > 0
                     'add data to content node
+                    childNode = content_node.createChild("ContentNode")
+                    childNode.setFields({
+                        title: param
+                        description: "Hubble images of " + param
+                    })
 
                     for each item in items
                         collectionChild = childNode.createChild("ContentNode")
@@ -43,6 +42,8 @@ sub retrieve_data()
                             collectionURL: item.href
                         })
                     end for
+                else
+                    print "Error - could not find any items for search query" + param
                 end if
             end if
         end for

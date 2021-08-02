@@ -1,0 +1,4 @@
+<component name="TextField" extends="TextEditBox">
+    <script type="text/brightscript" uri="TextField.brs" />
+
+</component>

@@ -32,3 +32,11 @@ end sub
 function GetCurrentScreen()
     return m.screenStack.Peek()
 end function
+
+function getRootScreen()
+    if m.screenStack.count() > 0
+        return m.screenStack[0]
+    else
+        return Invalid
+    end if
+end function
