@@ -20,5 +20,4 @@ sub item_focused()
     item = row.GetChild(focusedIndex[1])
     m.description.text = item.description
     m.title.text = item.title
-
 end sub

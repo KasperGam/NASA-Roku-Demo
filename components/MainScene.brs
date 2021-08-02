@@ -54,6 +54,8 @@ sub data_error()
     m.errorDialog.message = "There was an error fetching images from NASA. Please exit and try again."
     m.errorDialog.buttons = ["OK"]
     m.errorDialog.observeField("buttonSelected", "close_dilaog")
+
+    m.top.dialog = m.errorDialog
 end sub
 
 sub close_dilaog(msg as Object)

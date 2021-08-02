@@ -32,7 +32,7 @@ sub retrieve_data()
 
                     for each item in items
                         collectionChild = childNode.createChild("ContentNode")
-                        collectionChild.title = item.data[0].title.asdf
+                        collectionChild.title = item.data[0].title
                         collectionChild.description = item.data[0].description
                         collectionChild.addFields({
                             collectionURL: item.href
