@@ -1,0 +1,29 @@
+<component name="GalleryScreen" extends="Group" initialFocus="RowList">
+    <script type="text/brightscript" uri="GalleryScreen.brs" />
+	<interface>
+        <!-- Specifies the content for the Grid -->
+        <field id="content" type="node" alias="rowlist.content" />
+        <field id="itemSelected" type="intarray" alwaysnotify="true" alias="rowlist.itemSelected" />
+    </interface>
+    <children>
+         <!-- Label with title and length of content -->
+        <Label
+	        id="title"
+	        width="1500"
+            color="0xFFFFFFFF"
+			translation="[90,110]"
+	    />
+
+        <RowList
+            id="rowlist"
+            visible="true"
+            numRows="2"
+            translation="[90, 155]"
+            itemSize="[1830, 350]"
+            rowItemSize="[[350, 350]]"
+            rowItemSpacing="[[40, 0]]"
+            itemSpacing="[0, 150]"
+            rowLabelOffset="[[10, 20]]"
+            showRowLabel="[true]" />
+    </children>
+</component>

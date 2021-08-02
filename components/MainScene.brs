@@ -4,8 +4,8 @@ sub init()
     ' Set scene background
     m.top.backgroundURI = "pkg:/images/bkg-fhd.jpeg"
 
-    ' Get rowlist
-    m.rowlist = m.top.findNode("rowlist")
+    ' Get the main gallery
+    m.galleryScreen = CreateObject("roSGNode", "GalleryScreen")
 
     ' set the loading indicator so we can use it later
     m.loadingIcon = m.top.findNode("loadingIcon")
@@ -39,11 +39,9 @@ sub data_loaded()
     m.loadingIcon.control = "stop"
     m.loadingIcon.visible = false
 
-    ' TODO: Show list with items on home
     content = m.data_task.content
-    m.rowlist.visible = true
-    m.rowlist.content = content
-    m.rowlist.setFocus(true)
+    m.galleryScreen.content = content
+    load_screen(m.galleryScreen)
 end sub
 
 sub data_error()
