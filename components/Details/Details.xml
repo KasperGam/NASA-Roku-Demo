@@ -11,6 +11,14 @@
         <field id="focused" type="integer" alwaysNotify="true" />
     </interface>
     <children>
+        <Poster
+            id="bkg_poster"
+            loadDisplayMode="scaleToZoom"
+            loadWidth="1280"
+            loadHeight="720"
+            width="1920"
+            height="1080"
+        />
         <LayoutGroup
             translation="[1675, 154]"
             layoutDirection="vertical"

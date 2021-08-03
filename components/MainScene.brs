@@ -17,6 +17,10 @@ sub init()
     get_data()
 end sub
 
+sub set_default_bkg()
+    m.top.backgroundUri = "pkg:/images/bkg-fhd.jpeg"
+end sub
+
 function configure_loading()
     m.loadingIcon.poster.loadSync = true
     m.loadingIcon.poster.uri = "pkg:/images/loading.png"
@@ -103,55 +107,6 @@ sub update_options()
     m.loadingIcon.visible = true
     m.loadingIcon.control = "start"
     get_data()
-end sub
-
-function set_default_bkg()
-    m.top.backgroundURI = "pkg:/images/bkg-fhd.jpeg"
-end function
-
-function set_image_bkg()
-    if m.image_task <> Invalid
-        m.image_task.control = "stop"
-        m.image_task.unobserveField("content")
-        m.image_task.unobserveField("error")
-    end if
-    rem Create data retriever, set observer for data_loaded, execute task
-    m.image_task = CreateObject("roSGNode", "ImageCollectionDataTask")
-    m.image_task.ObserveField("content", "image_loaded")
-    m.image_task.ObserveField("error", "image_error")
-    m.image_task.control = "run"
-    ?"runing image task"
-end function
-
-
-sub image_loaded()
-    m.image_task.unobserveField("content")
-    m.image_task.unobserveField("error")
-
-    m.loadingIcon.control = "stop"
-    m.loadingIcon.visible = false
-    ?"image loaded"
-    content = m.image_task.content
-    ?content
-    m.top.backgroundURI = content
-end sub
-
-sub image_error()
-    m.image_task.unobserveField("content")
-    m.image_task.unobserveField("error")
-
-    print "ERROR- cannot load NASA data!"
-
-    m.loadingIcon.control = "stop"
-    m.loadingIcon.visible = false
-
-    m.errorDialog = createObject("roSGNode", "Dialog")
-    m.errorDialog.title = "Error"
-    m.errorDialog.message = "There was an error fetching images from NASA. Please exit and try again."
-    m.errorDialog.buttons = ["OK"]
-    m.errorDialog.observeField("buttonSelected", "close_dilaog")
-
-    m.top.dialog = m.errorDialog
 end sub
 
 function Push(node as Object)
