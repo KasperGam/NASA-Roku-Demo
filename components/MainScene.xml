@@ -6,6 +6,11 @@
     <script type="text/brightscript" uri="controllers/SlideShowLogic.brs" />
     <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
     <script type="text/brightscript" uri="pkg:/source/defaults.brs" />
+    <interface>
+        <function name="Push"/>
+        <function name="set_default_bkg"/>
+        <function name="set_image_bkg"/>
+    </interface>
     <children>
         <!-- add the logo -->
         <LayoutGroup

@@ -3,7 +3,7 @@
 	<interface>
         <!-- Specifies the content for the Grid -->
         <field id="content" type="node" alias="rowlist.content" />
-        <field id="itemSelected" type="intarray" alwaysnotify="true" alias="rowlist.itemSelected" />
+        <field id="item_selected" type="intarray" alwaysnotify="true" alias="rowlist.itemSelected" />
     </interface>
     <children>
          <!-- Label with title and length of content -->

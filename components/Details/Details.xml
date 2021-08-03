@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="Details" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
     <script type="text/brightscript" uri="Details.brs" />
+    <script type="text/brightscript" uri="pkg:/components/controllers/ScreenManager.brs" />
     <interface>
         <!-- content -->
         <field id="content" type="node" />
@@ -11,23 +12,24 @@
     </interface>
     <children>
         <LayoutGroup
-            translation="[154, 154]"
-            layoutDirection="horiz"
+            translation="[1675, 154]"
+            layoutDirection="vertical"
             horizAlignment="right"
             itemSpacings="[35]">
             <Label
                 id="title"
-                width="250"
-                wrap="false"
+                width="350"
+                wrap="true"
                 horizAlign="right"
             />
             <Rectangle
-                width="900"
+
+                width="1200"
                 height="600"
                 color="0xFFFFFF00">
                 <ScrollableText
                     id="descriptiveText"
-                    width="890"
+                    width="1150"
                     height="690"
                 />
             </Rectangle>
