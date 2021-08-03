@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "brighterscript": "^0.40.0"
+  },
+  "scripts": {
+    "build": "bsc",
+    "package": "bsc --create-package"
+  }
+}

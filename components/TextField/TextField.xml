@@ -1,4 +1,1 @@
-<component name="TextField" extends="TextEditBox">
-    <script type="text/brightscript" uri="TextField.brs" />
-
-</component>
+<component name="TextField" extends="TextEditBox"/>

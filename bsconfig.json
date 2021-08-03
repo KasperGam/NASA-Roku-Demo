@@ -1,0 +1,11 @@
+{
+    "files": [
+        "manifest",
+        "source/**/*.*",
+        "components/**/*.*",
+        "images/**/*.*"
+    ],
+    "stagingFolderPath": "dist",
+    "retainStagingFolder": true,
+    "autoImportComponentScript": true
+}
