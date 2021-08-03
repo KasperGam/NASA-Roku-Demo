@@ -2,9 +2,6 @@
 <component name="MainScene" extends="Scene">
     <script type="text/brightscript" uri="MainScene.brs" />
     <script type="text/brightscript" uri="controllers/ScreenManager.brs" />
-    <script type="text/brightscript" uri="controllers/GridScreen.brs" />
-    <script type="text/brightscript" uri="controllers/SlideShowLogic.brs" />
-    <script type="text/brightscript" uri="controllers/DetailsScreen.brs" />
     <script type="text/brightscript" uri="pkg:/source/defaults.brs" />
     <interface>
         <function name="Push"/>

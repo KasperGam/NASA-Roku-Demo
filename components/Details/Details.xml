@@ -11,9 +11,14 @@
         <field id="focused" type="integer" alwaysNotify="true" />
     </interface>
     <children>
+        <Rectangle
+            id="bkg_rect"
+            width="1920"
+            height="1080"
+            color="0x111111FF" />
         <Poster
             id="bkg_poster"
-            loadDisplayMode="scaleToZoom"
+            loadDisplayMode="scaleToFit"
             loadWidth="1280"
             loadHeight="720"
             width="1920"
