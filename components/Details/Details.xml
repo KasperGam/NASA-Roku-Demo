@@ -1,4 +1,36 @@
-<component name="Details" extends="Group">
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Details" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
     <script type="text/brightscript" uri="Details.brs" />
-
+    <interface>
+        <!-- content -->
+        <field id="content" type="node" />
+        <!-- go to the chosen item -->
+        <field id="chosen" type="integer" onChange="item_selected" value="0" alwaysNotify="true" />
+        <!-- what item is focused  -->
+        <field id="focused" type="integer" alwaysNotify="true" />
+    </interface>
+    <children>
+        <LayoutGroup
+            translation="[154, 154]"
+            layoutDirection="horiz"
+            horizAlignment="right"
+            itemSpacings="[35]">
+            <Label
+                id="title"
+                width="250"
+                wrap="false"
+                horizAlign="right"
+            />
+            <Rectangle
+                width="900"
+                height="600"
+                color="0xFFFFFF00">
+                <ScrollableText
+                    id="descriptiveText"
+                    width="890"
+                    height="690"
+                />
+            </Rectangle>
+        </LayoutGroup>
+    </children>
 </component>
