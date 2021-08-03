@@ -1,0 +1,8 @@
+<component name="ImageCollectionDataTask" extends="Task">
+    <script type="text/brightscript" uri="ImageCollectionDataTask.brs" />
+    <interface>
+        <field id="collectionURL" type="String" />
+        <field id="imageURL" type="String" />
+        <field id="error" type="String" />
+    </interface>
+</component>
