@@ -1,3 +1,6 @@
+import "pkg:/source/defaults.brs"
+import "controllers/ScreenManager.brs"
+
 sub init()
     screen_manager()
 
@@ -42,7 +45,7 @@ sub get_data()
     m.data_task = CreateObject("roSGNode", "NASADataTask")
     m.data_task.ObserveField("content", "data_loaded")
     m.data_task.ObserveField("error", "data_error")
-    m.data_task.keywords = get_keywords(m.options.queries)
+    m.data_task.keywords = get_keywords(m.options)
     m.data_task.control = "run"
 end sub
 
@@ -97,7 +100,8 @@ sub open_options()
     end if
 
     if not m.optionsScreen.visible
-        m.optionsScreen.callFunc("setInitialOptions", m.options)
+        m.optionsScreen.options = m.options
+        m.optionsScreen@.setInitialOptions()
         load_screen(m.optionsScreen)
     end if
 end sub
